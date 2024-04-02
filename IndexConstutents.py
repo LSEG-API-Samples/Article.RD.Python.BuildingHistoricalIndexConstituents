@@ -7,12 +7,12 @@ rd.open_session()
 class IndexConstituents:
 
     def get_historical_constituents(self, index, start, end):
-        initial_constituents = self.get_constutents_as_of(index, start)
+        initial_constituents = self.get_constituents_as_of(index, start)
         constituent_changes = self.get_constituent_changes(index, start, end)
         historical_constituents = self.update_constituents(start, initial_constituents, constituent_changes)
         return historical_constituents
 
-    def get_constutents_as_of(self, ric, date):
+    def get_constituents_as_of(self, ric, date):
         initial_constituents = rd.get_data(universe=[f"0#{ric}({date.replace('-', '')})"], 
                     fields=["TR.PriceClose"],
                     parameters={"SDATE":f"{date}", "EDATE":f"{date}"}
