@@ -8,4 +8,4 @@ While identifying the current members of an index is straightforward, uncovering
 
 This article aims to streamline this process. We introduce a series of functions designed to simplify access to historical index data, allowing users to retrieve this information through a single API request. In addition to the series of functions we explore in the article, we have encapsulated them within a singleton Python object, offering a unified interface for their invocation. This object is accessible in this repo.
 
-You can read the full article here:
+You can read the full article [here](https://developers.lseg.com/en/article-catalog/article/building-historical-index-constituents):
